@@ -1,0 +1,9 @@
+with-expecter: true
+dir: "mocks"
+outpkg: "mocks"
+packages:
+  github.com/tphakala/go-xsoar:
+    interfaces:
+      IncidentService:
+        config:
+          filename: incident_service.go
