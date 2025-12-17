@@ -1,5 +1,10 @@
 # go-xsoar
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/tphakala/go-xsoar.svg)](https://pkg.go.dev/github.com/tphakala/go-xsoar)
+[![CI](https://github.com/tphakala/go-xsoar/actions/workflows/ci.yaml/badge.svg)](https://github.com/tphakala/go-xsoar/actions/workflows/ci.yaml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/tphakala/go-xsoar)](https://goreportcard.com/report/github.com/tphakala/go-xsoar)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Native Go API client for Palo Alto Networks Cortex XSOAR 8.x / XSIAM.
 
 ## Features
