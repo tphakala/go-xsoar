@@ -17,8 +17,8 @@ import (
 )
 
 const (
-	defaultHTTPTimeout   = 30 * time.Second
-	defaultMaxBodySize   = 10 * 1024 * 1024 // 10MB
+	defaultHTTPTimeout = 30 * time.Second
+	defaultMaxBodySize = 10 * 1024 * 1024 // 10MB
 )
 
 // Transport handles HTTP communication with the XSOAR API.

@@ -147,34 +147,34 @@ func (p *IncidentPage) NextOffset() int {
 
 // CreateIncidentRequest contains data for creating a new incident.
 type CreateIncidentRequest struct {
-	Name         string            `json:"name"`
-	Type         string            `json:"type"`
-	Severity     Severity          `json:"severity,omitempty"`
-	Owner        string            `json:"owner,omitempty"`
-	Description  string            `json:"description,omitempty"`
-	Labels       []Label           `json:"labels,omitempty"`
-	CustomFields map[string]any    `json:"CustomFields,omitempty"`
-	CreateDate   time.Time         `json:"createDate,omitzero"`
+	Name         string         `json:"name"`
+	Type         string         `json:"type"`
+	Severity     Severity       `json:"severity,omitempty"`
+	Owner        string         `json:"owner,omitempty"`
+	Description  string         `json:"description,omitempty"`
+	Labels       []Label        `json:"labels,omitempty"`
+	CustomFields map[string]any `json:"CustomFields,omitempty"`
+	CreateDate   time.Time      `json:"createDate,omitzero"`
 }
 
 // UpdateIncidentRequest contains data for updating an incident.
 type UpdateIncidentRequest struct {
-	Severity     *Severity         `json:"severity,omitempty"`
-	Owner        *string           `json:"owner,omitempty"`
-	Status       *IncidentStatus   `json:"status,omitempty"`
-	Description  *string           `json:"description,omitempty"`
-	CustomFields map[string]any    `json:"CustomFields,omitempty"`
+	Severity     *Severity       `json:"severity,omitempty"`
+	Owner        *string         `json:"owner,omitempty"`
+	Status       *IncidentStatus `json:"status,omitempty"`
+	Description  *string         `json:"description,omitempty"`
+	CustomFields map[string]any  `json:"CustomFields,omitempty"`
 }
 
 // CloseIncidentRequest contains data for closing an incident.
 type CloseIncidentRequest struct {
-	Reason     string `json:"closeReason,omitempty"`
-	Notes      string `json:"closeNotes,omitempty"`
-	CloseDate  time.Time `json:"closeDate,omitzero"`
+	Reason    string    `json:"closeReason,omitempty"`
+	Notes     string    `json:"closeNotes,omitempty"`
+	CloseDate time.Time `json:"closeDate,omitzero"`
 }
 
 // searchRequest is the internal request format for incident search.
 type searchRequest struct {
-	Filter     *IncidentFilter `json:"filter,omitempty"`
+	Filter *IncidentFilter `json:"filter,omitempty"`
 	PageOptions
 }
