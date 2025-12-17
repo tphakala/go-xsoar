@@ -13,7 +13,7 @@ Native Go API client for Palo Alto Networks Cortex XSOAR 8.x / XSIAM.
 ## Installation
 
 ```bash
-go get github.com/user/go-xsoar
+go get github.com/tphakala/go-xsoar
 ```
 
 ## Quick Start
@@ -26,7 +26,7 @@ import (
     "fmt"
     "log"
 
-    "github.com/user/go-xsoar"
+    "github.com/tphakala/go-xsoar"
 )
 
 func main() {
@@ -237,8 +237,8 @@ mapped := xsoar.Map(iterator, func(i *xsoar.Incident) string {
 
 The package provides interfaces that can be mocked using [mockery](https://github.com/vektra/mockery):
 
-```go
-//go:generate mockery --name=IncidentService --output=mocks --outpkg=mocks
+```bash
+go generate ./...
 ```
 
 Example test:

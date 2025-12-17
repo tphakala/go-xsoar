@@ -23,8 +23,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/user/go-xsoar/internal/api"
-	"github.com/user/go-xsoar/internal/auth"
+	"github.com/tphakala/go-xsoar/internal/api"
+	"github.com/tphakala/go-xsoar/internal/auth"
 )
 
 // Default configuration values.

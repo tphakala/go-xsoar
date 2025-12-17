@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/user/go-xsoar"
+	"github.com/tphakala/go-xsoar"
 )
 
 func makeSeq[T any](items []T) iter.Seq2[T, error] {

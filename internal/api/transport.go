@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/user/go-xsoar/internal/auth"
+	"github.com/tphakala/go-xsoar/internal/auth"
 )
 
 const (

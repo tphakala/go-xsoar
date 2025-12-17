@@ -7,13 +7,12 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/user/go-xsoar/internal/api"
+	"github.com/tphakala/go-xsoar/internal/api"
 )
 
 const (
-	defaultPageSize     = 100
-	maxPageSize         = 1000
-	httpStatusBadRequest = 400
+	defaultPageSize = 100
+	maxPageSize     = 1000
 )
 
 // IncidentService provides operations on XSOAR incidents.
@@ -130,7 +129,7 @@ func (s *incidentService) SearchPage(ctx context.Context, filter *IncidentFilter
 		return nil, err
 	}
 
-	if resp.StatusCode >= httpStatusBadRequest {
+	if resp.StatusCode >= http.StatusBadRequest {
 		return nil, parseError(resp.StatusCode, resp.Body, resp.Headers.Get("X-Request-ID"))
 	}
 
@@ -195,7 +194,7 @@ func (s *incidentService) Get(ctx context.Context, id string, opts ...RequestOpt
 		}
 	}
 
-	if resp.StatusCode >= httpStatusBadRequest {
+	if resp.StatusCode >= http.StatusBadRequest {
 		return nil, parseError(resp.StatusCode, resp.Body, resp.Headers.Get("X-Request-ID"))
 	}
 
@@ -223,7 +222,7 @@ func (s *incidentService) Create(ctx context.Context, req *CreateIncidentRequest
 		return nil, err
 	}
 
-	if resp.StatusCode >= httpStatusBadRequest {
+	if resp.StatusCode >= http.StatusBadRequest {
 		return nil, parseError(resp.StatusCode, resp.Body, resp.Headers.Get("X-Request-ID"))
 	}
 
@@ -278,7 +277,7 @@ func (s *incidentService) Update(ctx context.Context, id string, req *UpdateInci
 		}
 	}
 
-	if resp.StatusCode >= httpStatusBadRequest {
+	if resp.StatusCode >= http.StatusBadRequest {
 		return parseError(resp.StatusCode, resp.Body, resp.Headers.Get("X-Request-ID"))
 	}
 
@@ -322,7 +321,7 @@ func (s *incidentService) Close(ctx context.Context, id string, req *CloseIncide
 		}
 	}
 
-	if resp.StatusCode >= httpStatusBadRequest {
+	if resp.StatusCode >= http.StatusBadRequest {
 		return parseError(resp.StatusCode, resp.Body, resp.Headers.Get("X-Request-ID"))
 	}
 
@@ -349,7 +348,7 @@ func (s *incidentService) Delete(ctx context.Context, id string, opts ...Request
 		return err
 	}
 
-	if resp.StatusCode >= httpStatusBadRequest {
+	if resp.StatusCode >= http.StatusBadRequest {
 		return parseError(resp.StatusCode, resp.Body, resp.Headers.Get("X-Request-ID"))
 	}
 

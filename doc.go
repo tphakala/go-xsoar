@@ -4,10 +4,10 @@
 // # Features
 //
 //   - Service-based architecture for expandability
-//   - Modern Go 1.23+ iterators for pagination
+//   - Modern Go 1.25+ iterators for pagination
 //   - Typed errors for precise error handling
 //   - Functional options for flexible configuration
-//   - Standard library only (no external dependencies)
+//   - No runtime dependencies (test dependencies only)
 //
 // # Quick Start
 //

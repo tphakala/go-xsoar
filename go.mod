@@ -1,4 +1,4 @@
-module github.com/user/go-xsoar
+module github.com/tphakala/go-xsoar
 
 go 1.25.4
 

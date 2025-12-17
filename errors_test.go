@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/user/go-xsoar"
+	"github.com/tphakala/go-xsoar"
 )
 
 func TestAPIError(t *testing.T) {

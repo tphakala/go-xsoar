@@ -1,6 +1,7 @@
 package xsoar
 
 import (
+	"encoding/json"
 	"errors"
 	"fmt"
 	"net/http"
@@ -135,8 +136,13 @@ func (e *ServerError) As(target any) bool {
 func parseError(statusCode int, body []byte, requestID string) error {
 	base := APIError{
 		StatusCode: statusCode,
-		Message:    string(body),
 		RequestID:  requestID,
+	}
+
+	// Try to parse structured JSON error response
+	if err := json.Unmarshal(body, &base); err != nil {
+		// Fallback to raw body if not valid JSON
+		base.Message = string(body)
 	}
 
 	switch {

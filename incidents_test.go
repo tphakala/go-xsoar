@@ -10,7 +10,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/user/go-xsoar"
+	"github.com/tphakala/go-xsoar"
 )
 
 func setupTestServer(t *testing.T, handler http.HandlerFunc) *xsoar.Client {
